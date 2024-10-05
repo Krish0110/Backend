@@ -1,3 +1,4 @@
+//main api for the backend
 const express=require('express');
 const path=require('path');
 const bodyParser=require('body-parser')
@@ -16,6 +17,7 @@ app.use('/api/verify-code/',require('./routes/api/verifyCode'))
 app.get('/',(req,res)=>{
   res.send('Hi')
 })
+
 const PORT=process.env.PORT||5000
 
 app.listen(PORT,()=>console.log(`Server started on ${PORT}`));
