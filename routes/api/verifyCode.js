@@ -7,9 +7,10 @@ const router=express.Router()
 
 //geting the code and verifying the code
 router.post('/',(req,res)=>{
+
   const{code}=req.body
 
-  if(code.length!==6 || code[5]==='7'){
+  if(!code ||code.length!==6 || code[5]==='7' ){
     return res.status(400).json({msg:"Verification Error"})
   }
 

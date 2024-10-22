@@ -13,6 +13,7 @@ app.use(cors());
 
 //creating the route to verify page
 app.use('/api/verify-code/',require('./routes/api/verifyCode'))
+
 //port to run the server
 app.get('/',(req,res)=>{
   res.send('Hi')
